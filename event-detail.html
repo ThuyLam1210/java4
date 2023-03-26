@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tiya Golf Club - Event Detail</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/templatemo-tiya-golf-club.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <style>
+        .form-control,
+        input:-internal-autofill-selected,
+        select:not([multiple]) {
+            color: #009999 !important;
+        }
+
+        .tm-search-input {
+            width: 360px;
+            border-radius: 0;
+            padding: 12px 15px;
+            color: #009999;
+            border: none;
+        }
+
+        [type=button]:not(:disabled),
+        [type=reset]:not(:disabled),
+        [type=submit]:not(:disabled),
+        button:not(:disabled) {
+            cursor: pointer;
+        }
+
+        .tm-search-btn {
+            color: white;
+            background-color: #3D405B;
+            border: none;
+            width: 100px;
+            height: 50px;
+            margin-left: -1px;
+        }
+
+        .tm-search-btn:hover {
+            background-color: #474b70;
+        }
+
+        .btn {
+            border-radius: 0px;
+        }
+
+        /* 
+ */
+
+        .tm-search-input {
+            width: 360px;
+            border-radius: 0;
+            padding: 12px 15px;
+            color: #009999;
+            border: none;
+        }
+
+        .tm-search-input:focus {
+            border-color: #009999;
+            box-shadow: 0 0 0 0.25rem rgb(0 153 153 / 0.25);
+        }
+
+        .tm-search-input::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #009999;
+            opacity: 1;
+            /* Firefox */
+        }
+
+        .tm-search-input::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: #009999;
+        }
+
+        .tm-search-btn {
+            color: white;
+            background-color: #009999;
+            border: none;
+            width: 100px;
+            height: 50px;
+            margin-left: -1px;
+        }
+
+        p,
+        .tm-text-gray {
+            color: #999;
+        }
+
+        .tm-text-gray-light {
+            color: #CCC;
+        }
+
+        .tm-text-gray-dark {
+            color: #666;
+        }
+
+        .tm-video-item {
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .tm-video-item img {
+            position: relative;
+            display: block;
+            min-height: 100%;
+            max-width: 100%;
+            opacity: 0.8;
+        }
+
+        .tm-video-item figcaption {
+            padding: 2em;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1.25em;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .tm-video-item figcaption::before,
+        .tm-video-item figcaption::after {
+            pointer-events: none;
+        }
+
+        .tm-video-item figcaption,
+        .tm-video-item figcaption>a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .tm-video-item figcaption>a {
+            z-index: 1000;
+            text-indent: 200%;
+            white-space: nowrap;
+            font-size: 0;
+            opacity: 0;
+        }
+
+        .tm-video-item h2 {
+            word-spacing: -0.15em;
+            font-weight: 300;
+        }
+
+        .tm-video-item h2,
+        .tm-video-item p {
+            margin: 0;
+        }
+
+        .tm-video-item p {
+            letter-spacing: 1px;
+            font-size: 68.5%;
+        }
+
+        .tm-gallery div.d-block {
+            animation: show .5s ease;
+        }
+
+        @keyframes show {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .tm-paging-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            font-size: 1.1rem;
+            color: #999;
+            background-color: #EEEEEE;
+            margin: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .tm-paging-link:hover,
+        .tm-paging-link.active {
+            background-color: #009999;
+            color: #fff;
+        }
+
+        /*  */
+        @media (max-width: 575px) {
+            .tm-container-content {
+                max-width: 420px;
+            }
+        }
+
+        .tm-text-primary {
+            color: #009999;
+        }
+
+        .tm-input-paging {
+            width: 40px;
+            border-radius: 0;
+            border: 1px solid #CCCCCC;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        .tm-gallery div.d-block {
+            animation: show .5s ease;
+        }
+
+
+        figure.effect-ming {
+            background: #030c17;
+        }
+
+        figure.effect-ming img {
+            opacity: 0.9;
+            -webkit-transition: opacity 0.35s;
+            transition: opacity 0.35s;
+        }
+
+        figure.effect-ming figcaption::before {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            bottom: 30px;
+            left: 30px;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.2);
+            content: '';
+            opacity: 0;
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: scale3d(1.4, 1.4, 1);
+            transform: scale3d(1.4, 1.4, 1);
+        }
+
+        figure.effect-ming h2 {
+            font-size: 1.3em;
+            opacity: 0;
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+
+        figure.effect-ming:hover figcaption::before,
+        figure.effect-ming:hover h2 {
+            opacity: 1;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+
+        figure.effect-ming:hover figcaption {
+            background-color: rgba(58, 52, 42, 0);
+        }
+
+        figure.effect-ming:hover img {
+            opacity: 0.4;
+        }
+
+        .tm-footer-links li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+
+        .tm-footer-links li a {
+            color: #999999;
+        }
+
+        .tm-footer-links li a:hover {
+            color: #009999;
+        }
+
+        .tm-social-links li {
+            list-style: none;
+            margin-right: 15px;
+        }
+
+        .tm-social-links li:last-child {
+            margin-right: 0;
+        }
+
+        .tm-social-links li a {
+            color: #999999;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            background-color: #fff;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tm-social-links li a:hover {
+            color: #fff;
+            background-color: #009999;
+        }
+
+        .tm-footer {
+            font-size: 0.95rem;
+        }
+
+        .tm-footer-title {
+            font-size: 1.4rem;
+        }
+
+        /* Videos */
+        #tm-video-container {
+            max-height: 400px;
+            overflow: hidden;
+            background-color: #333;
+            margin-bottom: 90px;
+            position: relative;
+        }
+
+        #tm-video {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        #tm-video-control-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            color: #e1e1e1;
+        }
+
+        .tm-video-details {
+            height: 100%;
+            padding: 40px;
+        }
+
+        .link-video {
+            height: 200px;
+        }
+
+        i {
+            color: #4D8B55;
+            margin-right: 10px;
+        }
+
+        .fa,
+        .fas {
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="images/logo.png" class="navbar-brand-image img-fluid" alt="Tiya Golf Club">
+                    <span class="navbar-brand-text">
+                        Tiya
+                        <small>Golf Club</small>
+                    </span>
+                </a>
+
+                <div class="d-lg-none ms-auto me-3">
+                    <a class="btn custom-btn custom-border-btn" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                        role="button" aria-controls="offcanvasExample">Member Login</a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#section_1">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#section_2">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#section_3">Membership</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#section_4">Events</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#section_5">Contact Us</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" href="event-listing.html">Event Listing</a></li>
+
+                                <li><a class="dropdown-item active" href="event-detail.html">Event Detail</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="d-none d-lg-block ms-lg-3">
+                        <a class="btn custom-btn custom-border-btn" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                            role="button" aria-controls="offcanvasExample">Member Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Member Login</h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body d-flex flex-column">
+                <form class="custom-form member-login-form" action="#" method="post" role="form">
+
+                    <div class="member-login-form-body">
+                        <div class="mb-4">
+                            <label class="form-label mb-2" for="member-login-number">Membership No.</label>
+
+                            <input type="text" name="member-login-number" id="member-login-number" class="form-control"
+                                placeholder="11002560" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label mb-2" for="member-login-password">Password</label>
+
+                            <input type="password" name="member-login-password" id="member-login-password"
+                                pattern="[0-9a-zA-Z]{4,10}" class="form-control" placeholder="Password" required="">
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Remember me
+                            </label>
+                        </div>
+
+                        <div class="col-lg-5 col-md-7 col-8 mx-auto">
+                            <button type="submit" class="form-control">Login</button>
+                        </div>
+
+                        <div class="text-center my-4">
+                            <a href="#">Forgotten password?</a>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="mt-auto mb-5">
+                    <p>
+                        <strong class="text-white me-3">Any Questions?</strong>
+
+                        <a href="tel: 010-020-0340" class="contact-link">
+                            010-020-0340
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#3D405B" fill-opacity="1"
+                    d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+
+
+        <section class="hero-section hero-50 d-flex justify-content-center align-items-center" id="section_1">
+
+            <div class="section-overlay"></div>
+
+            <svg viewBox="0 0 1962 178" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path fill="#3D405B" d="M 0 114 C 118.5 114 118.5 167 237 167 L 237 167 L 237 0 L 0 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#3D405B" d="M 236 167 C 373 167 373 128 510 128 L 510 128 L 510 0 L 236 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#3D405B" d="M 509 128 C 607 128 607 153 705 153 L 705 153 L 705 0 L 509 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#3D405B" d="M 704 153 C 812 153 812 113 920 113 L 920 113 L 920 0 L 704 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#3D405B" d="M 919 113 C 1048.5 113 1048.5 148 1178 148 L 1178 148 L 1178 0 L 919 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#3D405B" d="M 1177 148 C 1359.5 148 1359.5 129 1542 129 L 1542 129 L 1542 0 L 1177 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#3D405B" d="M 1541 129 C 1751.5 129 1751.5 138 1962 138 L 1962 138 L 1962 0 L 1541 0 Z"
+                    stroke-width="0"></path>
+            </svg>
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-12">
+
+                        <h1 class="text-white mb-4 pb-2">Event Detail.</h1>
+
+                        <a href="#section_2" class="btn custom-btn smoothscroll me-3">Learn more</a>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <form class="d-flex tm-search-form">
+                            <input class="form-control tm-search-input" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button class="btn btn-outline-success tm-search-btn" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            <svg viewBox="0 0 1962 178" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path fill="#ffffff" d="M 0 114 C 118.5 114 118.5 167 237 167 L 237 167 L 237 0 L 0 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#ffffff" d="M 236 167 C 373 167 373 128 510 128 L 510 128 L 510 0 L 236 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#ffffff" d="M 509 128 C 607 128 607 153 705 153 L 705 153 L 705 0 L 509 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#ffffff" d="M 704 153 C 812 153 812 113 920 113 L 920 113 L 920 0 L 704 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#ffffff" d="M 919 113 C 1048.5 113 1048.5 148 1178 148 L 1178 148 L 1178 0 L 919 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#ffffff" d="M 1177 148 C 1359.5 148 1359.5 129 1542 129 L 1542 129 L 1542 0 L 1177 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#ffffff" d="M 1541 129 C 1751.5 129 1751.5 138 1962 138 L 1962 138 L 1962 0 L 1541 0 Z"
+                    stroke-width="0"></path>
+            </svg>
+        </section>
+
+        <section class="container-fluid tm-container-content" style="margin-top: 100px;">
+            <div class="row mb-4">
+                <h2 class="col-6 tm-text-primary">
+                    Latest Photos
+                </h2>
+                <div class="col-6 d-flex justify-content-end align-items-center">
+                    <form action="" class="tm-text-primary">
+                        Page <input type="text" value="1" size="1" class="tm-input-paging tm-text-primary"> of 3
+                    </form>
+                </div>
+
+                <div class="row tm-mb-90 tm-gallery">
+                    <!-- 1 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                        <figure class="effect-ming tm-video-item">
+                            <!-- <iframe class="link-video" src="https://www.youtube.com/embed/L1IIeP6Gh6g"
+                             title="YouTube video player" 
+                             ></iframe> -->
+                            <img src="images/p1.jpg" alt="Image" class="img-fluid">
+                            <figcaption class="d-flex align-items-center justify-content-center">
+                                <h2>View more</h2>
+                                <a href="photo-detail.html">View more</a>
+                            </figcaption>
+                        </figure>
+                        <div class="d-flex justify-content-between tm-text-gray">
+                            <i class="far fa-share" aria-hidden="true" style="color: #009999;">Share</i>
+                            <span class="tm-text-gray-light"></span>
+                            <span>11,300 views</span>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                        <figure class="effect-ming tm-video-item">
+                            <img src="images/p1.jpg" alt="Image" class="img-fluid">
+                            <figcaption class="d-flex align-items-center justify-content-center">
+                                <h2>Abstract</h2>
+                                <a href="photo-detail.html">View more</a>
+                            </figcaption>
+                        </figure>
+                        <div class="d-flex justify-content-between tm-text-gray">
+                            <span class="tm-text-gray-light">10 Sep 2020</span>
+                            <span>42,700 views</span>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                        <figure class="effect-ming tm-video-item">
+                            <img src="images/p1.jpg" alt="Image" class="img-fluid">
+                            <figcaption class="d-flex align-items-center justify-content-center">
+                                <h2>Flowers</h2>
+                                <a href="photo-detail.html">View more</a>
+                            </figcaption>
+                        </figure>
+                        <div class="d-flex justify-content-between tm-text-gray">
+                            <span class="tm-text-gray-light">8 Sep 2020</span>
+                            <span>11,402 views</span>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                        <figure class="effect-ming tm-video-item">
+                            <img src="images/p1.jpg" alt="Image" class="img-fluid">
+                            <figcaption class="d-flex align-items-center justify-content-center">
+                                <h2>Rosy</h2>
+                                <a href="photo-detail.html">View more</a>
+                            </figcaption>
+                        </figure>
+                        <div class="d-flex justify-content-between tm-text-gray">
+                            <span class="tm-text-gray-light">4 Sep 2020</span>
+                            <span>32,906 views</span>
+                        </div>
+                    </div>
+                </div> <!-- container-fluid, tm-container-content -->
+
+        </section>
+
+
+    </main>
+
+    <!-- <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12 me-auto mb-5 mb-lg-0">
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <img src="images/logo.png" class="navbar-brand-image img-fluid" alt="">
+                        <span class="navbar-brand-text">
+                            Tiya
+                            <small>Golf Club</small>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-12">
+                    <h5 class="site-footer-title mb-4">Join Us</h5>
+
+                    <p class="d-flex border-bottom pb-3 mb-3 me-lg-3">
+                        <span>Mon-Fri</span>
+                        6:00 AM - 6:00 PM
+                    </p>
+
+                    <p class="d-flex me-lg-3">
+                        <span>Sat-Sun</span>
+                        6:30 AM - 8:30 PM
+                    </p>
+                    <br>
+                    <p class="copyright-text">Copyright © 2048 Tiya Golf Club</p>
+                </div>
+
+                <div class="col-lg-2 col-12 ms-auto">
+                    <ul class="social-icon mt-lg-5 mt-3 mb-4">
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-instagram"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-twitter"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-whatsapp"></a>
+                        </li>
+                    </ul>
+
+                    <p class="copyright-text">Design: <a rel="nofollow" href="https://templatemo.com"
+                            target="_blank">TemplateMo</a></p>
+                </div>
+
+            </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#81B29A" fill-opacity="1"
+                d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+            </path>
+        </svg>
+    </footer> -->
+
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

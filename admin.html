@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <!-- Bootstrap css -->
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="css/bootstrap-icons.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/admin.css">
+   <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+<body>
+   <!-- Page Loader -->
+   <div id="loader-wrapper">
+      <div id="loader"></div>
+
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+
+   </div>
+   <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="#">
+            <i class="fas fa-film mr-2"></i>
+            ONLINE ENTERTAIMENT
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0 ">
+               <li class="nav-item">
+                  <a class="nav-link nav-link-1 active" aria-current="page" href="admin.html">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link nav-link-2" href="page_yeuthich.html">My Favorites</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link nav-link-3" href="page_chitiet.html">Movies</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link nav-link-4" href="#">Contact</a>
+               </li>
+            </ul>
+
+            <div class=" d-lg-block ms-lg-3 dropdown  position-static  navbar-dropdown">
+               <a class="nav-link dropdown-toggle" href="#" data-bs-display="static" role="button" id="accountDropdown"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Account
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModalLogin"
+                     data-bs-whatever="@mdo">Login</a></li>
+                  <li><a class="dropdown-item" data-bs-toggle="modal"
+                     data-bs-target="#exampleModalRegister" data-bs-whatever="@mdo">Registration</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                  <li><a class="dropdown-item" data-bs-toggle="modal"
+                     data-bs-target="#ModalForgotPassword" data-bs-whatever="@mdo">Forgot Password</a></li>
+                  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModalLogout"
+                     data-bs-whatever="@mdo">Logoff</a></li>
+                  <li><a class="dropdown-item" data-bs-toggle="modal"
+                     data-bs-target="#exampleModalChangePassword" data-bs-whatever="@mdo">Change Password</a></li>
+                  <li><a class="dropdown-item" data-bs-toggle="modal"
+                     data-bs-target="#exampleModalEditProfile" data-bs-whatever="@mdo">Edit Profile</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+      <!-- Đăng Xuất -->
+      <div class="modal fade" id="exampleModalLogout" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="offcanvass">
+                  <div class="offcanvas-header">
+                      <h5 class="offcanvas-title " id="offcanvasExampleLabel">LOGOFF</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body d-flex flex-column">
+                      <div class="member-login-form-body">
+                          <div class="mt-3" style="text-align: center;font-size: 20px;color: darkslategrey;"> Are you sure you want to sign out?</div>
+                         
+                          <div class="d-flex justify-content-center align-items-center mt-3">
+                              <button class="btn btn-default btn-cancel" style="margin-right: 20px;">OK</button>
+                              <button class="btn btn-danger ">Cancel</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+  <!--Đăng Nhập -->
+  <div class="modal fade" id="exampleModalLogin" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <!--  Nội dung -->
+              <div class="offcanvass">
+                  <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">LOGIN</h5>
+
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <!--  -->
+                  <div class="offcanvas-body d-flex flex-column">
+                      <form class="custom-form member-login-form" action="#" method="post" role="form">
+
+                          <div class="member-login-form-body">
+                              <div class="mt-3">
+                                  <label class="form-label mb-2" for="member-login-number">Username</label>
+
+                                  <input type="text" name="member-login-number" id="member-login-number"
+                                      class="form-control" placeholder="Enter username" required>
+                              </div>
+
+                              <div class="mb-4">
+                                  <label class="form-label mb-2" for="member-login-password">Password</label>
+
+                                  <input type="password" name="member-login-password" id="member-login-password"
+                                      pattern="[0-9a-zA-Z]{4,10}" class="form-control"
+                                      placeholder="Enter password" required="">
+                              </div>
+
+                              <div class="form-check mb-4">
+                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+
+                                  <label class="form-check-label" for="flexCheckDefault">
+                                      Remember me
+                                  </label>
+                              </div>
+
+                              <div class="col-lg-5 col-md-7 col-8 mx-auto">
+                                  <button type="submit" class="form-control">Login</button>
+                              </div>
+
+                              <div class="text-center my-4">
+                                  <a href="#">Forgotten password?</a>
+                              </div>
+                          </div>
+                      </form>
+                  </div><br><br>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                      <path fill="#c38b7b" fill-opacity="1"
+                          d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+                      </path>
+                  </svg>
+
+              </div>
+
+              <!--  -->
+          </div>
+      </div>
+  </div>
+  <!--  -->
+  <!--Đăng Ký -->
+  <div class="modal fade" id="exampleModalRegister" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <!--  Nội dung -->
+              <div class="offcanvass">
+                  <div class="offcanvas-header">
+                      <h5 class="offcanvas-title " id="offcanvasExampleLabel">REGISTRATION</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <!--  -->
+                  <div class="offcanvas-body d-flex flex-column">
+                      <form class="custom-form member-login-form" action="#" method="post" role="form">
+
+                          <div class="member-login-form-body">
+                              <div class="mt-3">
+                                  <label class="form-label mb-2" for="member-login-number">Username</label>
+
+                                  <input type="text" name="member-login-number" id="member-login-number"
+                                      class="form-control" placeholder="Enter username" required>
+                              </div>
+
+                              <div class="mb-4">
+                                  <label class="form-label mb-2" for="member-login-password">Password</label>
+
+                                  <input type="password" name="member-login-password" id="member-login-password"
+                                      pattern="[0-9a-zA-Z]{4,10}" class="form-control"
+                                      placeholder="Enter password" required="">
+                              </div>
+
+                              <div class="mb-4">
+                                  <label class="form-label mb-2">Fullname</label>
+
+                                  <input type="name" name="member-login-password" id="member-login-password"
+                                      pattern="[0-9a-zA-Z]{4,10}" class="form-control"
+                                      placeholder="Enter fullname" required="">
+                              </div>
+
+                              <div class="mb-4">
+                                  <label class="form-label mb-2">Email Address</label>
+
+                                  <input type="email" name="member-login-password" id="member-login-password"
+                                      pattern="" class="form-control" placeholder="Enter email" required="">
+                              </div>
+
+                              <div class="col-lg-5 col-md-7 col-8 mx-auto">
+                                  <button type="submit" class="form-control">Submit</button>
+                              </div>
+
+                              <div class="text-center d-flex my-4">
+                                  <p style="font-size: 18px;margin-left: 15px; margin-right: 10px;">Do you already
+                                      have an account? </p> <a style="font-size: 18px;list-style: none;" href="#"
+                                      data-bs-toggle="modal" data-bs-target="#exampleModalLogin"
+                                      data-bs-whatever="@mdo"> Login Now</a>
+                              </div>
+                          </div>
+                      </form>
+                  </div><br><br>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                      <path fill="#c38b7b" fill-opacity="1"
+                          d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+                      </path>
+                  </svg>
+
+              </div>
+
+              <!--  -->
+          </div>
+      </div>
+  </div>
+  <!--Quên mật khẩu -->
+  <div class="modal fade" id="ModalForgotPassword" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <!--  Nội dung -->
+              <div class="offcanvass">
+                  <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">FORGOT PASSWORD</h5>
+
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <!--  -->
+                  <div class="offcanvas-body d-flex flex-column">
+                      <form class="custom-form member-login-form" action="#" method="post" role="form">
+
+                          <div class="member-login-form-body">
+                              <div class="mt-3">
+                                  <label class="form-label mb-2" for="member-login-number">Username</label>
+
+                                  <input type="name" name="#" class="form-control" placeholder="Enter username"
+                                      required>
+                              </div>
+
+                              <div class="mb-4">
+                                  <label class="form-label mb-2">Email</label>
+
+                                  <input type="email" name="#" pattern="" class="form-control"
+                                      placeholder="Enter email" required="">
+                              </div>
+
+                              <div class="col-lg-5 col-md-7 col-8 mx-auto">
+                                  <button type="submit" class="form-control">Login</button>
+                              </div>
+
+                              <div class="text-center my-4">
+                                  <a href="#">Forgotten password?</a>
+                              </div>
+                          </div>
+                      </form>
+                  </div><br><br>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                      <path fill="#c38b7b" fill-opacity="1"
+                          d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+                      </path>
+                  </svg>
+
+              </div>
+
+              <!--  -->
+          </div>
+      </div>
+  </div>
+  <!--Đổi mật khẩu -->
+  <div class="modal fade" id="exampleModalChangePassword" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <!--  Nội dung -->
+              <div class="offcanvass">
+                  <div class="offcanvas-header">
+                      <h5 class="offcanvas-title " id="offcanvasExampleLabel">CHANGE PASSWORD</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <!--  -->
+                  <div class="offcanvas-body d-flex flex-column">
+                      <form class="custom-form member-login-form" action="#" method="post" role="form">
+
+                          <div class="member-login-form-body">
+                              <div class="mt-3">
+                                  <label class="form-label mb-2" for="member-login-number">Username</label>
+
+                                  <input type="text" name="#" class="form-control" placeholder="Enter username"
+                                      required>
+                              </div>
+
+                              <div class="mb-4">
+                                  <label class="form-label mb-2">Current Password</label>
+
+                                  <input type="password" name="#" pattern="[0-9a-zA-Z]{4,10}" class="form-control"
+                                      placeholder="Enter password" required="">
+                              </div>
+
+                              <div class="mb-4">
+                                  <label class="form-label mb-2">New Password</label>
+
+                                  <input type="password" name="#" pattern="[0-9a-zA-Z]{4,10}" class="form-control"
+                                      placeholder="Enter new password" required="">
+                              </div>
+
+                              <div class="mb-4">
+                                  <label class="form-label mb-2">Confirm New Password</label>
+
+                                  <input type="password" name="#" pattern="[0-9a-zA-Z]{4,10}" class="form-control"
+                                      placeholder="Enter confirm new password" required="">
+                              </div>
+                              <br>
+                              <div class="col-lg-5 col-md-7 col-8 mx-auto">
+                                  <button type="submit" class="form-control">Submit</button>
+                              </div>
+
+                              <!-- <div class="text-center d-flex my-4" >
+                                 <p style="font-size: 18px;margin-left: 15px; margin-right: 10px;">Do you already have an account? </p> <a style="font-size: 18px;" href="#" data-bs-toggle="modal" data-bs-target="#exampleModalLogin"
+                                 data-bs-whatever="@mdo"> Login Now</a>
+                              </div> -->
+                          </div>
+                      </form>
+                  </div><br><br><br>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                      <path fill="#c38b7b" fill-opacity="1"
+                          d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+                      </path>
+                  </svg>
+
+              </div>
+
+              <!--  -->
+          </div>
+      </div>
+  </div>
+  <!-- Edit Profile -->
+  <div class="modal fade" id="exampleModalEditProfile" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <!--  Nội dung -->
+              <div class="offcanvass">
+                  <div class="offcanvas-header">
+                      <h5 class="offcanvas-title " id="offcanvasExampleLabel">EDIT PROFILE</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <!--  -->
+                  <div class="offcanvas-body d-flex flex-column">
+                      <form class="custom-form member-login-form" action="#" method="post" role="form">
+
+                          <div class="member-login-form-body">
+                              <div class="mt-3">
+                                  <label class="form-label mb-2" for="member-login-number">Username</label>
+
+                                  <input type="text" name="member-login-number" id="member-login-number"
+                                      class="form-control" placeholder="Enter username" required>
+                              </div>
+
+                              <div class="mb-4">
+                                  <label class="form-label mb-2" for="member-login-password">Password</label>
+
+                                  <input type="password" name="#" pattern="[0-9a-zA-Z]{4,10}" class="form-control"
+                                      placeholder="Enter password" required="">
+                              </div>
+
+                              <div class="mb-4">
+                                  <label class="form-label mb-2">Fullname</label>
+
+                                  <input type="name" name="#" pattern="" class="form-control"
+                                      placeholder="Enter fullname" required="">
+                              </div>
+
+                              <div class="mb-4">
+                                  <label class="form-label mb-2">Email Address</label>
+
+                                  <input type="email" name="#" id="member-login-password" pattern=""
+                                      class="form-control" placeholder="Enter email" required="">
+                              </div> <br>
+
+                              <div class="col-lg-5 col-md-7 col-8 mx-auto">
+                                  <button type="submit" class="form-control">Update</button>
+                              </div>
+
+                          </div>
+                      </form>
+                  </div><br><br><br>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                      <path fill="#c38b7b" fill-opacity="1"
+                          d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+                      </path>
+                  </svg>
+
+              </div>
+
+              <!--  -->
+          </div>
+      </div>
+  </div>
+
+   <div class="main-content">
+      <!-- Thể Loại -->
+      <section class="about-section section-padding mt-5" id="section_2">
+
+         <div class="container-fluid" style="width: 90%;">
+            <div class="row">
+               <div class="col-lg-12 d-flex">
+                  <div class="all-genres mb-3">Latest Movies</div>
+                  <a class="viewall" href="">View All</a>
+               </div>
+               <!-- Pim 1 -->
+               <div class="col-lg-3 col-md-12 col-sm-12 col-12 mb-4 mb-lg-0 mb-md-0">
+                  <div class="member-block">
+                     <div class=" member-block-image-wrap ">
+                        <img
+                           src="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2023/01/04/ggsy8gg0_1920x1080-didennoicogio1_296_168.webp"
+                           class="member-block-image img-fluid" alt="">
+                        <ul class="social-icon">
+                           Lean more
+                        </ul>
+                     </div>
+
+                     <div class="member-block-info d-flex align-items-center">
+                        <h4>Đi Đến Nơi Có Gió</h4>
+
+                     </div>
+                     <div class=" d-flex justify-content-between likeandshare">
+                        <div class="date">
+                           <i class="fas fa-eye"></i>
+                           <label>170.000.000 views</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-like'></i>
+                           <label>170</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-dislike'></i>
+                           <label>50</label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Pim 2 -->
+               <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-0">
+                  <div class="member-block">
+                     <div class="member-block-image-wrap">
+                        <img
+                           src="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2023/03/20/q860gk45_1920x1080-quylo_296_168.webp"
+                           class="member-block-image img-fluid" alt="">
+                        <ul class="social-icon">
+                           Lean more
+                        </ul>
+                     </div>
+
+                     <div class="member-block-info d-flex align-items-center">
+                        <h4>Đường Về Nhà</h4>
+
+                     </div>
+                     <div class="d-flex justify-content-between likeandshare">
+                        <div class="date">
+                           <i class="fas fa-eye"></i>
+                           <label>170.000.000 views</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-like'></i>
+                           <label>170</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-dislike'></i>
+                           <label>50</label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Pim 3 -->
+               <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-0">
+                  <div class="member-block">
+                     <div class="member-block-image-wrap">
+                        <img
+                           src="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2021/08/16/niruqrhc_1920x1080-corgi_296_168.webp"
+                           class="member-block-image img-fluid" alt="">
+                        <ul class="social-icon">
+                           Lean more
+                        </ul>
+                     </div>
+
+                     <div class="member-block-info d-flex align-items-center">
+                        <h4>Corgi-Những Chú Chó Hoàng Gia</h4>
+
+                     </div>
+                     <div class="d-flex justify-content-between likeandshare">
+                        <div class="date">
+                           <i class="fas fa-eye"></i>
+                           <label>170.000.000 views</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-like'></i>
+                           <label>170</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-dislike'></i>
+                           <label>50</label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Pim 4 -->
+               <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-0">
+                  <div class="member-block">
+                     <div class="member-block-image-wrap">
+                        <img
+                           src="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2021/12/01/h61rct8v_1920x1080-luongbatnghi_296_168.webp"
+                           class="member-block-image img-fluid" alt="">
+                        <ul class="social-icon">
+                           Lean more
+                        </ul>
+                     </div>
+
+                     <div class="member-block-info d-flex align-items-center">
+                        <h4>Lưỡng Bất Nghi</h4>
+
+                     </div>
+                     <div class="d-flex justify-content-between likeandshare">
+                        <div class="date">
+                           <i class="fas fa-eye"></i>
+                           <label>10.000.000 views</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-like'></i>
+                           <label>170</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-dislike'></i>
+                           <label>10</label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="tm-container-content events-section section-bg section-padding mt-5">
+         <div class="container-fluid " style="width: 90%;">
+
+            <div class="col-lg-12 d-flex">
+               <div class="all-genres mb-3">Videos List</div>
+               <!-- <a class="viewall" href="">View All</a> -->
+            </div>
+
+            <div class="row mb-4">
+               <div class="row tm-mb-90 tm-gallery">
+                  <!-- 1 -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 item">
+                     <figure class="effect-ming tm-video-item">
+
+                        <img
+                           src="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2022/12/13/0rphkojz_1920x1080-huongmattuakhoisuong_296_168.webp"
+                           alt="Image" class="img-fluid">
+                        <figcaption class="d-flex align-items-center justify-content-center">
+                           <h2 style="color: azure;">View more</h2>
+                           <a href="photo-detail.html">View more</a>
+                        </figcaption>
+                     </figure>
+                     <div class="d-flex justify-content-between tm-text-gray">
+
+                        <span class="tm-text-gray-light mb-2">Hương mật tựa khói sương - Tập 1</span>
+
+                     </div>
+                     <div class="d-flex justify-content-between likeandshare">
+                        <div class="date">
+                           <i class="fas fa-eye"></i>
+                           <label>170.000.000 views</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-like'></i>
+                           <label>170</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-dislike'></i>
+                           <label>50</label>
+                        </div>
+                     </div>
+
+                  </div>
+                  <!-- 2 -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 item">
+                     <figure class="effect-ming tm-video-item">
+                        <img
+                           src="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2022/08/11/95mvner2_1920x1080-tramhuongnhutiet-375ab5fe85a95f68bf48327c0e56ed5dc_296_168.webp"
+                           alt="Image" class="img-fluid">
+                        <figcaption class="d-flex align-items-center justify-content-center">
+                           <h2 style="color: azure;">View more</h2>
+                           <a href="photo-detail.html">View more</a>
+                        </figcaption>
+                     </figure>
+                     <div class="d-flex justify-content-between tm-text-gray">
+                        <span class="tm-text-gray-light mb-2">Trầm hương như tiết - Tập 1</span>
+
+                     </div>
+                     <div class="d-flex justify-content-between likeandshare">
+                        <div class="date">
+                           <i class="fas fa-eye"></i>
+                           <label>170.000.000 views</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-like'></i>
+                           <label>170</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-dislike'></i>
+                           <label>50</label>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- 3 -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 item">
+                     <figure class="effect-ming tm-video-item">
+                        <img
+                           src="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2022/12/16/mroqvgjp_1920x1080-cogaithaymuihuong_296_168.webp"
+                           alt="Image" class="img-fluid">
+                        <figcaption class="d-flex align-items-center justify-content-center">
+                           <h2 style="color: azure;">View more</h2>
+                           <a href="photo-detail.html">View more</a>
+                        </figcaption>
+                     </figure>
+                     <div class="d-flex justify-content-between tm-text-gray">
+                        <span class="tm-text-gray-light mb-2">Cô gái thấy mùi hương - Tập 1</span>
+
+                     </div>
+                     <div class="d-flex justify-content-between likeandshare">
+                        <div class="date">
+                           <i class="fas fa-eye"></i>
+                           <label>170.000.000 views</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-like'></i>
+                           <label>170</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-dislike'></i>
+                           <label>50</label>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- 4 -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 item">
+                     <figure class="effect-ming tm-video-item">
+                        <img
+                           src="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2022/04/14/ts6m2bdj_1920x1080-ngugiaoky2_296_168.webp"
+                           alt="Image" class="img-fluid">
+                        <figcaption class="d-flex align-items-center justify-content-center">
+                           <h2 style="color: azure;">View more</h2>
+                           <a href="photo-detail.html">View more</a>
+                        </figcaption>
+                     </figure>
+                     <div class="d-flex justify-content-between tm-text-gray">
+                        <span class="tm-text-gray-light mb-2">Ngự Giao Ký - Tập 20</span>
+
+                     </div>
+                     <div class="d-flex justify-content-between likeandshare">
+                        <div class="date">
+                           <i class="fas fa-eye"></i>
+                           <label>170.000.000 views</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-like'></i>
+                           <label>170</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-dislike'></i>
+                           <label>50</label>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- 5 -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 item">
+                     <figure class="effect-ming tm-video-item">
+
+                        <img
+                           src="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2023/02/16/sc6sgzaf_1920x1080-amanh_296_168.webp"
+                           alt="Image" class="img-fluid">
+                        <figcaption class="d-flex align-items-center justify-content-center">
+                           <h2 style="color: azure;">View more</h2>
+                           <a href="photo-detail.html">View more</a>
+                        </figcaption>
+                     </figure>
+                     <div class="d-flex justify-content-between tm-text-gray">
+
+                        <span class="tm-text-gray-light mb-2 mb-2">Phim Lẻ: Ám Ảnh - Tập 1</span>
+
+                     </div>
+                     <div class="d-flex justify-content-between likeandshare">
+                        <div class="date">
+                           <i class="fas fa-eye"></i>
+                           <label>170.000.000 views</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-like'></i>
+                           <label>170</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-dislike'></i>
+                           <label>50</label>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- 6 -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 item">
+                     <figure class="effect-ming tm-video-item">
+
+                        <img
+                           src="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2023/01/03/wqtqmh8w_1920x1080-phudoduyen-2_296_168.webp"
+                           class="img-fluid" />
+                        <figcaption class="d-flex align-items-center justify-content-center">
+                           <h2 style="color: azure;">View more</h2>
+                           <a href="photo-detail.html">View more</a>
+                        </figcaption>
+                     </figure>
+                     <div class="d-flex justify-content-between tm-text-gray">
+
+                        <span class="tm-text-gray-light mb-2 mb-2">Phù Đồ Duyên - Tập 1</span>
+                     </div>
+                     <div class="d-flex justify-content-between likeandshare">
+                        <div class="date">
+                           <i class="fas fa-eye"></i>
+                           <label>170.000.000 views</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-like'></i>
+                           <label>170</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-dislike'></i>
+                           <label>50</label>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- 7 -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 item">
+                     <figure class="effect-ming tm-video-item">
+                        <img
+                           src="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2023/02/28/r4qemwy6_1920x1080-gautruckungfu3_296_168.webp"
+                           class="img-fluid" />
+                        <figcaption class="d-flex align-items-center justify-content-center">
+                           <h2 style="color: azure;">View more</h2>
+                           <a href="photo-detail.html">View more</a>
+                        </figcaption>
+                     </figure>
+                     <div class="d-flex justify-content-between tm-text-gray">
+
+                        <span class="tm-text-gray-light mb-2 mb-2">Gấu Trúc Kung-Fu 3 </span>
+
+                     </div>
+                     <div class="d-flex justify-content-between likeandshare">
+                        <div class="date">
+                           <i class="fas fa-eye"></i>
+                           <label>170.000.000 views</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-like'></i>
+                           <label>170</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-dislike'></i>
+                           <label>50</label>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- 8 -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 item">
+                     <figure class="effect-ming tm-video-item">
+
+                        <img
+                           src="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2023/03/23/oaos222e_1920x1080-tinhyeumathoi_296_168.webp"
+                           alt="Image" class="img-fluid">
+                        <figcaption class="d-flex align-items-center justify-content-center">
+                           <h2 style="color: azure;">View more</h2>
+                           <a href="photo-detail.html">View more</a>
+                        </figcaption>
+                     </figure>
+                     <div class="d-flex justify-content-between tm-text-gray">
+
+                        <span class="tm-text-gray-light mb-2">Tình yêu mà thôi - Tập 1</span>
+
+                     </div>
+                     <div class="d-flex justify-content-between likeandshare">
+                        <div class="date">
+                           <i class="fas fa-eye"></i>
+                           <label>170.000.000 views</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-like'></i>
+                           <label>170</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-dislike'></i>
+                           <label>50</label>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- 9 -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 item">
+                     <figure class="effect-ming tm-video-item">
+
+                        <img
+                           src="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2022/11/23/41xnai5v_1920x1080-playlisttinhyeu_296_168.webp"
+                           alt="Image" class="img-fluid">
+                        <figcaption class="d-flex align-items-center justify-content-center">
+                           <h2 style="color: azure;">View more</h2>
+                           <a href="photo-detail.html">View more</a>
+                        </figcaption>
+                     </figure>
+                     <div class="d-flex justify-content-between tm-text-gray">
+
+                        <span class="tm-text-gray-light mb-2">Playlist Tình Yêu - Tập 1</span>
+
+                     </div>
+                     <div class="d-flex justify-content-between likeandshare">
+                        <div class="date">
+                           <i class="fas fa-eye"></i>
+                           <label>170.000.000 views</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-like'></i>
+                           <label>170</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-dislike'></i>
+                           <label>50</label>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- 10 -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 item">
+                     <figure class="effect-ming tm-video-item">
+
+                        <img
+                           src="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2022/09/23/smesry1a_1920x1080-spyxfamily-2-demob7901ec77e13ce234143e2962eae5952_296_168.webp"
+                           alt="Image" class="img-fluid">
+                        <figcaption class="d-flex align-items-center justify-content-center">
+                           <h2 style="color: azure;">View more</h2>
+                           <a href="photo-detail.html">View more</a>
+                        </figcaption>
+                     </figure>
+                     <div class="d-flex justify-content-between tm-text-gray">
+
+                        <span class="tm-text-gray-light mb-2">Sky & Family - Phần II</span>
+
+                     </div>
+                     <div class="d-flex justify-content-between likeandshare">
+                        <div class="date">
+                           <i class="fas fa-eye"></i>
+                           <label>170.000.000 views</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-like'></i>
+                           <label>170</label>
+                        </div>
+                        <div class="date">
+                           <i class='bx bxs-dislike'></i>
+                           <label>50</label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Phân trang -->
+
+               <div class="col-lg-12 d-flex justify-content-end align-items-center">
+
+                  <div class="tm-paging d-flex listPage ml-auto mr-0">
+                     <a class="active ">1</a>
+                     <a>2</a>
+                     <a>3</a>
+                     <a>4</a>
+                  </div>
+               </div>
+
+
+            </div>
+         </div>
+
+      </section>
+   </div>
+  <!-- footer -->
+  <footer class="bg-dark py-5 footer mt-5" >
+   <div class="container">
+       <div class="row text-white">
+           <div class="col-md-6 col-lg-6">
+               <a style="font-size: 30px;color: aliceblue;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" href="admin.html">ONLINE ENTERTAIMENT</a>
+               <p class=" mt-3" style="color: aliceblue;">© 2023. All Rights Reserved. All videos and shows on this platform are trademarks of, and all related images and content are the property of, Streamit Inc.
+                   Duplication and copy of this is strictly prohibited. All rights reserved.</p>
+           </div>
+           <div class="col-md-6 col-lg-3">
+               <h5 class="fw-light">Links</h5>
+               <ul class="list-unstyled">
+                   <li class="my-3">
+                       <a href="index.html" class="text-white">
+                           <i class="fas fa-chevron-right me-1"></i> Home
+                       </a>
+                   </li>
+                   <li class="my-3">
+                       <a href="#" class="text-white">
+                           <i class="fas fa-chevron-right me-1"></i> My Favorites
+                       </a>
+                   </li>
+
+                   <li class="my-3">
+                       <a href="blogs.html" class="text-white">
+                           <i class="fas fa-chevron-right me-1"></i>Movies
+                       </a>
+                   </li>
+                   <li class="my-3">
+                       <a href="contact.html" class="text-white">
+                           <i class="fas fa-chevron-right me-1"></i> Contact
+                       </a>
+                   </li>
+               </ul>
+           </div>
+           <div class="col-md-6 col-lg-3">
+               <h5 class="fw-light mb-3 follow">Follow Us</h5>
+               <div>
+                   <ul class="list-unstyled d-flex">
+                       <li>
+                           <a href="#" class="text-white">
+                               <i class="fab fa-facebook-f"></i>
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#" class="text-white">
+                               <i class="fab fa-twitter"></i>
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#" class="text-white">
+                               <i class="fab fa-instagram"></i>
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#" class="text-white">
+                               <i class="fab fa-pinterest"></i>
+                           </a>
+                       </li>
+                   </ul>
+               </div>
+           </div>  
+               <hr>
+              <center><p>Copyright © 2023 Created By Thyyne FpolyCanTho</p></center> 
+
+       </div>
+
+   </div>
+   </footer>
+  
+
+   <!-- Custom JS-->
+   
+
+   <!-- JAVASCRIPT FILES -->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery.sticky.js"></script>
+   <script src="js/plugins.js"></script>
+   <script>
+      $(window).on("load", function () {
+         $('body').addClass('loaded');
+      });
+
+      let thisPage = 1;
+      let limit = 8;
+      let list = document.querySelectorAll('.tm-gallery .item');
+
+      function loadItem() {
+         let beginGet = limit * (thisPage - 1);
+         let endGet = limit * thisPage - 1;
+
+         list.forEach((item, key) => {
+
+            if (key >= beginGet && key <= endGet) {
+               item.style.display = 'block';
+
+            } else {
+               item.style.display = 'none';
+            }
+         })
+         listPage();
+      }
+      loadItem();
+      function listPage() {
+         let count = Math.ceil(list.length / limit);
+         document.querySelector('.listPage').innerHTML = '';
+
+         if (thisPage != 1) {
+            let prev = document.createElement('a');
+            prev.innerText = 'PREV';
+            prev.setAttribute('onclick', "changePage(" + (thisPage - 1 + ")"));
+            document.querySelector('.listPage').appendChild(prev);
+         }
+         for (i = 1; i <= count; i++) {
+            let newPage = document.createElement('a');
+            newPage.innerText = i;
+            if (i == thisPage) {
+               newPage.classList.add('active');
+
+            }
+            newPage.setAttribute('onclick', "changePage(" + i + ")");
+            document.querySelector('.listPage').appendChild(newPage);
+         }
+
+         if (thisPage != count) {
+            let next = document.createElement('a');
+            next.innerText = 'NEXT';
+            next.setAttribute('onclick', "changePage(" + (thisPage + 1 + ")"));
+            document.querySelector('.listPage').appendChild(next);
+         }
+      }
+
+      function changePage(i) {
+         thisPage = i;
+         loadItem();
+      }
+   </script>
+</body>
+
+</html>
